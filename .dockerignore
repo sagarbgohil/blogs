@@ -1,0 +1,13 @@
+
+.env
+.git
+*.md
+*.log
+*.swp
+*.tmp
+node_modules
+vendor
+*.test
+__pycache__/
+.idea
+.vscode

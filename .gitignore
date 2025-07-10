@@ -1,0 +1,14 @@
+.env
+.env.*
+blog-api
+*.log
+*.exe
+*.out
+*.test
+vendor/
+bin/
+dist/
+.idea/
+.vscode/
+.DS_Store
+logs/
