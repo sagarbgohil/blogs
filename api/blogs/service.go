@@ -14,7 +14,6 @@ func collection() *mongo.Collection {
 	return config.DbClient.Collection("blogs")
 }
 
-
 func insertOne(blog Blog) (string, error) {
 	// Insert the blog into the collection
 	insertedID, err := collection().InsertOne(context.Background(), blog)

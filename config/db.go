@@ -11,7 +11,7 @@ var DbClient *mongo.Database
 
 func InitDB() (*mongo.Client, error) {
 	log.Println("Initializing MongoDB connection...")
-	
+
 	// client options
 	clientOptions := options.Client().ApplyURI(Constants.MongoURI)
 
@@ -23,7 +23,6 @@ func InitDB() (*mongo.Client, error) {
 		return nil, err
 	}
 	log.Println("Connected to MongoDB!")
-
 
 	DbClient = client.Database(Constants.MongoDBName)
 

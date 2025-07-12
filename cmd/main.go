@@ -11,13 +11,13 @@ import (
 
 func main() {
 	// Load configuration
-    _, err := config.Load()
+	_, err := config.Load()
 	if err != nil {
 		log.Fatalf("error loading config: %v", err)
 	}
 
 	// Initialize MongoDB client
-    client, err := config.InitDB()
+	client, err := config.InitDB()
 	if err != nil {
 		log.Fatalf("error initializing database: %v", err)
 	}
@@ -28,7 +28,7 @@ func main() {
 	}()
 
 	// Initialize the router
-    router := routers.InitRouter()
+	router := routers.InitRouter()
 	log.Println("Server is running on http://localhost:" + config.Constants.Port)
 	log.Fatal(http.ListenAndServe(":"+config.Constants.Port, router))
 }

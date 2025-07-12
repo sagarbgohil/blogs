@@ -12,7 +12,6 @@ func V1Router() *chi.Mux {
 	// Register the blogs routes
 	router.Mount("/blogs", blogs.V1Router())
 
-
 	// Return the initialized router
 	return router
 }
